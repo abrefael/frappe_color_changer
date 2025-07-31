@@ -1,30 +1,13 @@
-//frappe.after_ajax(() => {
-//                console.log('begin');
-//    if (frappe.ui && frappe.ui.form) {
-//        frappe.ui.form.on("*", {
-//            refresh: function(frm) {
-//                console.log('begin');
-////                color_changer();
-//                console.log('end');
-//            }
-//        });
-//    }
-//});
-
-
-console.log('before');
 frappe.after_ajax(() => {
-console.log('begin');
     if (frappe.ui && frappe.ui.form) {
         frappe.ui.form.on("*", {
             refresh: function(frm) {
-                console.log('after if');
+                color_changer();
             }
         });
     }
- console.log('end');
 });
-console.log('after');
+
 
 function color_changer() {
 	console.log('begin_inside');
