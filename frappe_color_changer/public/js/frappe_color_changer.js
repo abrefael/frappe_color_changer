@@ -1,5 +1,5 @@
 
-console.log(document.body);
+console.log(document.body.getAttribute('data-route'));
 
 if (frappe.ui && frappe.ui.form) {
 
