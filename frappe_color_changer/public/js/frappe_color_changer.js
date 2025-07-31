@@ -1,16 +1,30 @@
 //frappe.after_ajax(() => {
-                console.log('begin');
+//                console.log('begin');
+//    if (frappe.ui && frappe.ui.form) {
+//        frappe.ui.form.on("*", {
+//            refresh: function(frm) {
+//                console.log('begin');
+////                color_changer();
+//                console.log('end');
+//            }
+//        });
+//    }
+//});
+
+
+console.log('before');
+frappe.after_ajax(() => {
+console.log('begin');
     if (frappe.ui && frappe.ui.form) {
         frappe.ui.form.on("*", {
             refresh: function(frm) {
-                console.log('begin');
-                color_changer();
-                console.log('end');
+                console.log('after if');
             }
         });
     }
-//});
-
+ console.log('end');
+});
+console.log('after');
 
 function color_changer() {
 	console.log('begin_inside');
@@ -57,6 +71,10 @@ function color_changer() {
 	changeRule('.like-disabled-input', 'color', '#613583');// ✓
 	changeRule('.control-label', 'color', '#865e3c');// ✓
 	changeRule('input[type="checkbox"]', 'boarder', '#e01b24');
+	changeRule('.frappe-control .ql-editor:not(.read-mode)', 'background-color', '#ff7800');
+	changeRule('.ql-toolbar.ql-snow', 'background-color', '#ff7800');
+	changeRule('.frappe-control .ql-editor:not(.read-mode)', 'background', '#613583');
+	changeRule('.ql-toolbar.ql-snow', 'background', '#613583');
 	var styleSheet = document.createElement("style")
 	styleSheet.textContent = '.grid-body .data-row a {color: #f9f06b;}'// ✓
 	document.head.appendChild(styleSheet)
