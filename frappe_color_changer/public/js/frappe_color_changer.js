@@ -8,7 +8,7 @@ const observer = new MutationObserver(() => {
 		if (d_rout != flag){
 			flag = d_rout;
 			if (d_rout_str[0] == 'Form'){
-				document.querySelectorAll('link[rel=stylesheet][href=' + href + ']')[0].remove();
+				$('link[rel=stylesheet][href="' + href +'"]').remove();
 				href = '/files/css/alon.css';
 				var link = document.createElement('link');
 				link.rel = "stylesheet";
@@ -19,7 +19,7 @@ const observer = new MutationObserver(() => {
 				console.log(document.body.getAttribute('data-route'));
 			}
 			else if (d_rout_str[0] != 'Form'){
-				document.querySelectorAll('link[rel=stylesheet][href=' + href + ']')[0].remove();
+				$('link[rel=stylesheet][href="' + href +'"]').remove();
 			}
 		}
 	}
