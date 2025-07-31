@@ -1,7 +1,7 @@
 
 
 if (frappe.ui && frappe.ui.form) {
-	var changeRule = function(selector, property, value) {
+	var changeRule = function(selector, property, value, k=0) {
 		var styles = document.styleSheets,
 			n, sheet, rules, m, done = false;
 			i = 0;
@@ -12,7 +12,7 @@ if (frappe.ui && frappe.ui.form) {
 				if(rules[m].selectorText){
 					if (rules[m].selectorText.toLowerCase() === selector) {
 						rules[m].style[property] = value;
-						if ((selector == '.navbar') && (i < 2)){
+						if (i < k){
 							done = false;
 						}
 						else{
@@ -30,7 +30,7 @@ if (frappe.ui && frappe.ui.form) {
 	changeRule('.std-form-layout > .form-layout > .form-page', 'background-color', '#3584e4');// ✓ 
 	changeRule('.page-head', 'background-color', '#3584e4');
 	changeRule('.page-container', 'background-color', '#3584e4');
-	changeRule('.navbar','background','#3584e4');
+	changeRule('.navbar','background','#3584e4', 2);
 	changeRule('.new-timeline .activity-title, .new-timeline .timeline-actions', 'background-color', '#3584e4');
 	//changeRule('body','color','#ff7800');
 	//changeRule('a','color','#ff7800');
@@ -44,6 +44,7 @@ if (frappe.ui && frappe.ui.form) {
 	changeRule('.grid-body .data-row','color','#f9f06b'); // ✓ table
 	changeRule('.grid-body', 'background-color', '#613583');// ✓ table
 	changeRule('.awesomplete .input-with-feedback', 'background-color', '#ff7800'); // ✓
+	changeRule('.ql-toolbar.ql-snow', 'background-color', '#ff7800',2);
 	changeRule('.awesomplete .input-with-feedback', 'color', '#613583');// ✓
 	changeRule('.form-control', 'background-color', '#ff7800');// ✓
 	changeRule('.form-control', 'color', '#613583');// ✓
