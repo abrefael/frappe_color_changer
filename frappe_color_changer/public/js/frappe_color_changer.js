@@ -1,10 +1,13 @@
 
-window.addEventListener('DOMContentLoaded', function() {
-  const navbar = document.body;
-//  while (!(document.body.getAttribute('data-route'))) {
-//  }
-  console.log(document.body.getAttribute('data-route'));
+
+const observer = new MutationObserver(() => {
+  if (document.body.getAttribute('data-route')) {
+    console.log(document.body.getAttribute('data-route'));
+  }
 });
+
+observer.observe(document.body, { childList: true, subtree: true });
+
 
 
 
