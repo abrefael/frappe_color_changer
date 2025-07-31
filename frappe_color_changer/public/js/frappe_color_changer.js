@@ -1,13 +1,15 @@
 
 const observer = new MutationObserver(() => {
-if ((document.body.getAttribute('data-route'))) {
-	const d_rout = document.body.getAttribute('data-route');
-	var d_rout_str = d_rout.split('/');
-	if (d_rout_str[0] == 'Form'){
-		console.log(document.body.getAttribute('data-route'));
-		observer.disconnect();
+	var flag = '';
+	var d_rout;
+	if ((document.body.getAttribute('data-route'))) {
+		d_rout = document.body.getAttribute('data-route');
+		var d_rout_str = d_rout.split('/');
+		if ((d_rout_str[0] == 'Form') && (d_rout != flag){
+			console.log(document.body.getAttribute('data-route'));
+			d_rout = flag;
+		}
 	}
-}
 });
 
 observer.observe(document.body, { childList: true, subtree: true });
