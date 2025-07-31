@@ -1,37 +1,32 @@
-
-
-function color_changer() {
-	var changeRule = function(selector, property, value) {
-		var styles = document.styleSheets,
-			n, sheet, rules, m, done = false;
-			i = 0;
-		for(n = 0; n < styles.length; n++) {
-			sheet = styles[n];
-			rules = sheet.cssRules || sheet.rules;
-			for(m = 0; m < rules.length; m++) {
-				if(rules[m].selectorText){
-					if (rules[m].selectorText.toLowerCase() === selector) {
-						rules[m].style[property] = value;
-						if ((selector == '.navbar') && (i < 2)){
-							done = false;
-						}
-						else{
-							done = true;
-							break;
-						}
+function changeRule = (selector, property, value) {
+	var styles = document.styleSheets,
+		n, sheet, rules, m, done = false;
+		i = 0;
+	for(n = 0; n < styles.length; n++) {
+		sheet = styles[n];
+		rules = sheet.cssRules || sheet.rules;
+		for(m = 0; m < rules.length; m++) {
+			if(rules[m].selectorText){
+				if (rules[m].selectorText.toLowerCase() === selector) {
+					rules[m].style[property] = value;
+					if ((selector == '.navbar') && (i < 2)){
+						done = false;
+					}
+					else{
+						done = true;
+						break;
 					}
 				}
-				if (done) {
-					break;
-				}
+			}
+			if (done) {
+				break;
 			}
 		}
-	};
+	}
 }
 
 
 if (frappe.ui && frappe.ui.form) {
-	console.log('something');
 	changeRule('.std-form-layout > .form-layout > .form-page', 'background-color', '#3584e4');// ✓ 
 	changeRule('.page-head', 'background-color', '#3584e4');
 	changeRule('.page-container', 'background-color', '#3584e4');
