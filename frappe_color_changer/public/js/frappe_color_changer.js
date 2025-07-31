@@ -7,6 +7,9 @@ if ((document.body.getAttribute('data-route'))) {
 		console.log(document.body.getAttribute('data-route'));
 		observer.disconnect();
 	}
+	else{
+		location.reload();
+	}
 }
 });
 
