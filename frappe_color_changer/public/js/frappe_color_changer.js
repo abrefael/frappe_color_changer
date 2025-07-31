@@ -1,9 +1,9 @@
 
 window.addEventListener('DOMContentLoaded', function() {
   const navbar = document.body;
-  if (navbar) {
-console.log(document.body.getAttribute('data-route'));
+  while (!(document.body.getAttribute('data-route'))) {
   }
+  console.log(document.body.getAttribute('data-route'));
 });
 
 
