@@ -5,9 +5,3 @@
  
  
  
- 
- .form-page + .grid-footer
-.grid-heading-row
-.grid-row
-input
-.ellipsis
