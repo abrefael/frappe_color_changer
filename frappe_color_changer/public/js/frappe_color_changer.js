@@ -35,7 +35,7 @@ function color_changer() {
 	changeRule('.std-form-layout > .form-layout > .form-page', 'background-color', '#3584e4');// ✓ 
 	changeRule('.page-head', 'background-color', '#3584e4');
 	changeRule('.page-container', 'background-color', '#3584e4');
-	changeRule('.navbar','background-color','#3584e4');
+	changeRule('.navbar','background','#3584e4');
 	changeRule('.new-timeline .activity-title, .new-timeline .timeline-actions', 'background-color', '#3584e4');
 	//changeRule('body','color','#ff7800');
 	//changeRule('a','color','#ff7800');
@@ -57,9 +57,7 @@ function color_changer() {
 	changeRule('.control-label', 'color', '#865e3c');// ✓
 	changeRule('input[type="checkbox"]', 'boarder', '#e01b24');
 	changeRule('.frappe-control .ql-editor:not(.read-mode)', 'background-color', '#ff7800');
-	changeRule('.ql-toolbar.ql-snow', 'background-color', '#ff7800');
 	changeRule('.frappe-control .ql-editor:not(.read-mode)', 'color', '#613583');
-	changeRule('.ql-toolbar.ql-snow', 'color', '#613583');
 	var styleSheet = document.createElement("style")
 	styleSheet.textContent = '.grid-body .data-row a {color: #f9f06b;}'// ✓
 	document.head.appendChild(styleSheet)
