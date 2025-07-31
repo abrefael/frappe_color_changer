@@ -1,0 +1,106 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-07-31 14:10:58.352751",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "doctype_name",
+  "tip",
+  "section_break_kqcq",
+  "dt_selected",
+  "parts",
+  "select_cqws",
+  "column_break_waoi",
+  "select_color",
+  "color_nzpl",
+  "section_break_mkwq",
+  "prev",
+  "preview"
+ ],
+ "fields": [
+  {
+   "fieldname": "doctype_name",
+   "fieldtype": "Link",
+   "label": "DocType Name",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "tip",
+   "fieldtype": "HTML",
+   "options": "<p>You should know the names of the Doctypes you usually work in and start writing their names to filter out the list.</p><p>You can also use the names of the different modules you work in as filter.</p>"
+  },
+  {
+   "fieldname": "section_break_kqcq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "dt_selected",
+   "fieldtype": "Check",
+   "hidden": 1
+  },
+  {
+   "fieldname": "section_break_mkwq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "preview",
+   "fieldtype": "HTML"
+  },
+  {
+   "fieldname": "parts",
+   "fieldtype": "Heading",
+   "label": "Parts"
+  },
+  {
+   "fieldname": "column_break_waoi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "select_color",
+   "fieldtype": "Heading",
+   "label": "Select Color"
+  },
+  {
+   "fieldname": "color_nzpl",
+   "fieldtype": "Color"
+  },
+  {
+   "fieldname": "select_cqws",
+   "fieldtype": "Select",
+   "options": ".std-form-layout > .form-layout > .form-page\n.page-head\n.page-container\n.navbar\n.new-timeline .activity-title, .new-timeline .timeline-actions\nbody\na\n.btn.btn-default, div#driver-popover-item .driver-popover-footer button.btn-default\n.grid-footer .btn, .grid-footer div#driver-popover-item .driver-popover-footer button, div#driver-popover-item .driver-popover-footer .grid-footer button, .grid-custom-buttons .btn, .grid-custom-buttons div#driver-popover-item .driver-popover-footer button, div#driver-popover-item .driver-popover-footer .grid-custom-buttons button\n.grid-footer, .grid-custom-buttons\n.comment-box .comment-input-container .frappe-control .ql-editor\n.grid-heading-row\n.grid-body .data-row\n.grid-body\n.awesomplete .input-with-feedback\n.ql-toolbar.ql-snow\n.form-control\n.like-disabled-input\n.control-label\ninput[type=\"checkbox\"]\n.frappe-control .ql-editor:not(.read-mode)\n.grid-body .data-row a"
+  },
+  {
+   "fieldname": "prev",
+   "fieldtype": "Button",
+   "label": "Create Preview"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-31 14:27:55.746459",
+ "modified_by": "Administrator",
+ "module": "Frappe Color Changer",
+ "name": "Frappe Color Changer",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
