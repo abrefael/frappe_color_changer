@@ -1,4 +1,5 @@
 
+console.log(document.body);
 
 if (frappe.ui && frappe.ui.form) {
 	console.log('something');
