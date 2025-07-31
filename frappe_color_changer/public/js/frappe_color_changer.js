@@ -31,6 +31,7 @@ function color_changer() {
 
 
 if (frappe.ui && frappe.ui.form) {
+	console.log('something');
 	changeRule('.std-form-layout > .form-layout > .form-page', 'background-color', '#3584e4');// ✓ 
 	changeRule('.page-head', 'background-color', '#3584e4');
 	changeRule('.page-container', 'background-color', '#3584e4');
