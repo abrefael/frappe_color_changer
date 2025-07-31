@@ -1,6 +1,7 @@
 
 
 if (frappe.ui && frappe.ui.form) {
+	console.log('something');
 	var changeRule = function(selector, property, value, k=0) {
 		var styles = document.styleSheets,
 			n, sheet, rules, m, done = false;
