@@ -11,7 +11,7 @@ app_license = "mit"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/frappe_color_changer/css/frappe_color_changer.css"
-app_include_js = "/assets/frappe_color_changer/js/frappe_color_changer.js"
+#app_include_js = "/assets/frappe_color_changer/js/frappe_color_changer.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/frappe_color_changer/css/frappe_color_changer.css"
@@ -28,7 +28,7 @@ app_include_js = "/assets/frappe_color_changer/js/frappe_color_changer.js"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-#doctype_js = {"doctype" : "/assets/frappe_color_changer/js/frappe_color_changer.js"}
+doctype_js = {"doctype" : "/assets/frappe_color_changer/js/frappe_color_changer.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
