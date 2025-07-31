@@ -15,13 +15,19 @@ function color_changer() {
 	var changeRule = function(selector, property, value) {
 		var styles = document.styleSheets,
 			n, sheet, rules, m, done = false;
+			i = 0;
 		for(n = 0; n < styles.length; n++) {
 			sheet = styles[n];
 			rules = sheet.cssRules || sheet.rules;
 			for(m = 0; m < rules.length; m++) {
 				if(rules[m].selectorText){
 					if (rules[m].selectorText.toLowerCase() === selector) {
-						done = true;
+						if ((selector == '.navbar') && (i < 2)){
+							done = false;
+						}
+						else{
+							done = true;
+						}
 						rules[m].style[property] = value;
 						break;
 					}
@@ -35,7 +41,7 @@ function color_changer() {
 	changeRule('.std-form-layout > .form-layout > .form-page', 'background-color', '#3584e4');// ✓ 
 	changeRule('.page-head', 'background-color', '#3584e4');
 	changeRule('.page-container', 'background-color', '#3584e4');
-	changeRule('.navbar','background','#3584e4');
+	changeRule('.navbar','background-color','#3584e4');
 	changeRule('.new-timeline .activity-title, .new-timeline .timeline-actions', 'background-color', '#3584e4');
 	//changeRule('body','color','#ff7800');
 	//changeRule('a','color','#ff7800');
