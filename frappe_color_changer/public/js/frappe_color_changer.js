@@ -1,13 +1,13 @@
+var flag = '';
 
 const observer = new MutationObserver(() => {
-	var flag = '';
 	var d_rout;
 	if ((document.body.getAttribute('data-route'))) {
 		d_rout = document.body.getAttribute('data-route');
 		var d_rout_str = d_rout.split('/');
 		if ((d_rout_str[0] == 'Form') && (d_rout != flag)){
+			flag = d_rout;
 			console.log(document.body.getAttribute('data-route'));
-			d_rout = flag;
 		}
 	}
 });
