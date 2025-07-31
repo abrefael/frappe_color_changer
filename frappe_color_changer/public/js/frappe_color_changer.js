@@ -35,8 +35,7 @@ function color_changer() {
 	changeRule('.std-form-layout > .form-layout > .form-page', 'background-color', '#3584e4');// ✓ 
 	changeRule('.page-head', 'background-color', '#3584e4');
 	changeRule('.page-container', 'background-color', '#3584e4');
-	document.querySelector('.navbar').style.backgroundColor = '#3584e4';
-	//changeRule('.navbar', 'background-color', '#3584e4');
+	changeRule('.navbar','background-color','#3584e4');
 	changeRule('.new-timeline .activity-title, .new-timeline .timeline-actions', 'background-color', '#3584e4');
 	//changeRule('body','color','#ff7800');
 	//changeRule('a','color','#ff7800');
