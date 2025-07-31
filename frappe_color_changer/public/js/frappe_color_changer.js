@@ -1,14 +1,3 @@
-//frappe.after_ajax(() => {
-    if (frappe.ui && frappe.ui.form) {
-       color_changer();
-        frappe.ui.form.on("*", {
-            refresh: function(frm) {
-                
-		console.log('begin_inside');
-            }
-        });
-    }
-//});
 
 
 function color_changer() {
@@ -38,6 +27,10 @@ function color_changer() {
 			}
 		}
 	};
+}
+
+
+if (frappe.ui && frappe.ui.form) {
 	changeRule('.std-form-layout > .form-layout > .form-page', 'background-color', '#3584e4');// ✓ 
 	changeRule('.page-head', 'background-color', '#3584e4');
 	changeRule('.page-container', 'background-color', '#3584e4');
