@@ -1,4 +1,5 @@
-frappe.after_ajax(() => {
+//frappe.after_ajax(() => {
+                console.log('begin');
     if (frappe.ui && frappe.ui.form) {
         frappe.ui.form.on("*", {
             refresh: function(frm) {
@@ -8,7 +9,7 @@ frappe.after_ajax(() => {
             }
         });
     }
-});
+//});
 
 
 function color_changer() {
