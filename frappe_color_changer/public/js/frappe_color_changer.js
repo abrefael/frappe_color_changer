@@ -11,11 +11,12 @@ const observer = new MutationObserver(() => {
 			link.rel = "stylesheet";
 			link.type = "text/css";
 			link.href = "/assets/frappe_color_changer/css/alon.css";
+			link.id = "temp_css";
 			document.head.appendChild(link);
 			console.log(document.body.getAttribute('data-route'));
 		}
 		else if ((d_rout_str[0] != 'Form') && (d_rout != flag)){
-		
+			getElementByID('temp_css').remove();
 		}
 	}
 });
