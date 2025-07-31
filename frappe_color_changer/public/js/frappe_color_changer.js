@@ -42,6 +42,8 @@ function color_changer() {
 	changeRule('.btn.btn-default, div#driver-popover-item .driver-popover-footer button.btn-default', 'background-color','#ff0000');
 	changeRule('.grid-footer .btn, .grid-footer div#driver-popover-item .driver-popover-footer button, div#driver-popover-item .driver-popover-footer .grid-footer button, .grid-custom-buttons .btn, .grid-custom-buttons div#driver-popover-item .driver-popover-footer button, div#driver-popover-item .driver-popover-footer .grid-custom-buttons button', 'background-color','#ff0000');
 	changeRule('.grid-footer, .grid-custom-buttons', 'background-color', '#3584e4');// ✓
+	changeRule('.comment-box .comment-input-container .frappe-control .ql-editor', 'background-color', '#ff7800');
+	changeRule('.comment-box .comment-input-container .frappe-control .ql-editor', 'color', '#613583');
 	changeRule('.grid-heading-row', 'background-color', '#613583'); // ✓ table head
 	changeRule('.grid-heading-row', 'color', '#f9f06b'); // ✓ table head
 	changeRule('.grid-body .data-row','color','#f9f06b'); // ✓ table
@@ -56,8 +58,8 @@ function color_changer() {
 	changeRule('input[type="checkbox"]', 'boarder', '#e01b24');
 	changeRule('.frappe-control .ql-editor:not(.read-mode)', 'background-color', '#ff7800');
 	changeRule('.ql-toolbar.ql-snow', 'background-color', '#ff7800');
-	changeRule('.frappe-control .ql-editor:not(.read-mode)', 'background', '#613583');
-	changeRule('.ql-toolbar.ql-snow', 'background', '#613583');
+	changeRule('.frappe-control .ql-editor:not(.read-mode)', 'color', '#613583');
+	changeRule('.ql-toolbar.ql-snow', 'color', '#613583');
 	var styleSheet = document.createElement("style")
 	styleSheet.textContent = '.grid-body .data-row a {color: #f9f06b;}'// ✓
 	document.head.appendChild(styleSheet)
