@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_import": 1,
- "autoname": "field:product",
+ "autoname": "field:doctype_name",
  "creation": "2024-04-15 08:43:23.271203",
  "doctype": "DocType",
  "engine": "InnoDB",
