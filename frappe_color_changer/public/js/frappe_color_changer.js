@@ -2,7 +2,9 @@ frappe.after_ajax(() => {
     if (frappe.ui && frappe.ui.form) {
         frappe.ui.form.on("*", {
             refresh: function(frm) {
+                console.log('begin');
                 color_changer();
+                console.log('end');
             }
         });
     }
@@ -10,6 +12,7 @@ frappe.after_ajax(() => {
 
 
 function color_changer() {
+	console.log('begin_inside');
 	var changeRule = function(selector, property, value) {
 		var styles = document.styleSheets,
 			n, sheet, rules, m, done = false;
@@ -56,4 +59,5 @@ function color_changer() {
 	var styleSheet = document.createElement("style")
 	styleSheet.textContent = '.grid-body .data-row a {color: #f9f06b;}'// ✓
 	document.head.appendChild(styleSheet)
+	console.log('end_inside');
 }
