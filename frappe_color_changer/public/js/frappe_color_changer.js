@@ -1,8 +1,9 @@
 //frappe.after_ajax(() => {
     if (frappe.ui && frappe.ui.form) {
+       color_changer();
         frappe.ui.form.on("*", {
             refresh: function(frm) {
-                color_changer();
+                
 		console.log('begin_inside');
             }
         });
