@@ -7,7 +7,7 @@ console.log('begin_inside');
             }
         });
     }
-});
+//});
 
 
 function color_changer() {
