@@ -1,4 +1,4 @@
-frappe.after_ajax(() => {
+//frappe.after_ajax(() => {
     if (frappe.ui && frappe.ui.form) {
         frappe.ui.form.on("*", {
             refresh: function(frm) {
