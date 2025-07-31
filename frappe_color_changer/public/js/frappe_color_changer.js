@@ -1,18 +1,16 @@
 
-var flag = false;
 const observer = new MutationObserver(() => {
-if ((document.body.getAttribute('data-route')) && (flag)) {
+if ((document.body.getAttribute('data-route'))) {
 	const d_rout = document.body.getAttribute('data-route');
 	var d_rout_str = d_rout.split('/');
 	if (d_rout_str[0] == 'Form'){
 		console.log(document.body.getAttribute('data-route'));
+		observer.disconnect();
 	}
-	flage = true;
 }
 });
 
 observer.observe(document.body, { childList: true, subtree: true });
-flag = false;
 
 
 
