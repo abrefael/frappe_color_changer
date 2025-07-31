@@ -1,11 +1,11 @@
 //frappe.after_ajax(() => {
     if (frappe.ui && frappe.ui.form) {
-    console.log('begin_inside');
+    
         frappe.ui.form.on("*", {
         
-            refresh: function(frm) {
+            onload: function(frm) {
 //                color_changer();
-
+		console.log('begin_inside');
             }
         });
     }
