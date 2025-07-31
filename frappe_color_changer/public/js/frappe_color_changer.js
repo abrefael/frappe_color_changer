@@ -1,5 +1,12 @@
 
+window.addEventListener('DOMContentLoaded', function() {
+  const navbar = document.body;
+  if (navbar) {
 console.log(document.body.getAttribute('data-route'));
+  }
+});
+
+
 
 if (frappe.ui && frappe.ui.form) {
 
