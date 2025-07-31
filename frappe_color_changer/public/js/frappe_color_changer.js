@@ -1,8 +1,9 @@
 
-
+var flag = false;
 const observer = new MutationObserver(() => {
-  if (document.body.getAttribute('data-route')) {
+  if ((document.body.getAttribute('data-route')) && (flag)) {
     console.log(document.body.getAttribute('data-route'));
+    flage = true;
   }
 });
 
