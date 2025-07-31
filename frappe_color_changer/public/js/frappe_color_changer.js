@@ -5,7 +5,7 @@ const observer = new MutationObserver(() => {
 	if ((document.body.getAttribute('data-route'))) {
 		d_rout = document.body.getAttribute('data-route');
 		var d_rout_str = d_rout.split('/');
-		if ((d_rout_str[0] == 'Form') && (d_rout != flag){
+		if ((d_rout_str[0] == 'Form') && (d_rout != flag)){
 			console.log(document.body.getAttribute('data-route'));
 			d_rout = flag;
 		}
