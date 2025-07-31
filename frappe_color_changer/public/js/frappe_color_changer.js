@@ -16,7 +16,7 @@ const observer = new MutationObserver(() => {
 			console.log(document.body.getAttribute('data-route'));
 		}
 		else if ((d_rout_str[0] != 'Form') && (d_rout != flag)){
-			getElementByID('temp_css').remove();
+			document.getElementByID('temp_css').remove();
 		}
 	}
 });
