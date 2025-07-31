@@ -22,14 +22,14 @@ function color_changer() {
 			for(m = 0; m < rules.length; m++) {
 				if(rules[m].selectorText){
 					if (rules[m].selectorText.toLowerCase() === selector) {
+						rules[m].style[property] = value;
 						if ((selector == '.navbar') && (i < 2)){
 							done = false;
 						}
 						else{
 							done = true;
+							break;
 						}
-						rules[m].style[property] = value;
-						break;
 					}
 				}
 				if (done) {
@@ -41,7 +41,7 @@ function color_changer() {
 	changeRule('.std-form-layout > .form-layout > .form-page', 'background-color', '#3584e4');// ✓ 
 	changeRule('.page-head', 'background-color', '#3584e4');
 	changeRule('.page-container', 'background-color', '#3584e4');
-	changeRule('.navbar','background-color','#3584e4');
+	changeRule('.navbar','background','#3584e4');
 	changeRule('.new-timeline .activity-title, .new-timeline .timeline-actions', 'background-color', '#3584e4');
 	//changeRule('body','color','#ff7800');
 	//changeRule('a','color','#ff7800');
