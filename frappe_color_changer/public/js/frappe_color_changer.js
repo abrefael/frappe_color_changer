@@ -9,7 +9,7 @@ const observer = new MutationObserver(() => {
 			flag = d_rout;
 			if (d_rout_str[0] == 'Form'){
 				$('link[rel=stylesheet][href="' + href +'"]').remove();
-				href = '/files/css/alon.css';
+				href = '/files/css/alon.css'; //href = '/files/css/' + user_first_name.toLowerCase() + '_' + d_rout_str[0].toLowerCase().replace(' ','_') + '.css';
 				var link = document.createElement('link');
 				link.rel = "stylesheet";
 				link.type = "text/css";
