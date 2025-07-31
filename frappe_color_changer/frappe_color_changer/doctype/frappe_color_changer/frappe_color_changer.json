@@ -10,10 +10,28 @@
   "section_break_kqcq",
   "dt_selected",
   "parts",
-  "select_cqws",
+  "select_i",
+  "select_ii",
+  "select_iii",
+  "select_iv",
+  "select_v",
+  "select_vi",
+  "select_vii",
+  "select_viii",
+  "select_ix",
+  "select_x",
   "column_break_waoi",
   "select_color",
-  "color_nzpl",
+  "color_i",
+  "color_ii",
+  "color_iii",
+  "color_iv",
+  "color_v",
+  "color_vi",
+  "color_vii",
+  "color_viii",
+  "color_ix",
+  "color_x",
   "section_break_mkwq",
   "prev",
   "preview"
@@ -63,11 +81,11 @@
    "label": "Select Color"
   },
   {
-   "fieldname": "color_nzpl",
+   "fieldname": "color_i",
    "fieldtype": "Color"
   },
   {
-   "fieldname": "select_cqws",
+   "fieldname": "select_i",
    "fieldtype": "Select",
    "options": ".std-form-layout > .form-layout > .form-page\n.page-head\n.page-container\n.navbar\n.new-timeline .activity-title, .new-timeline .timeline-actions\nbody\na\n.btn.btn-default, div#driver-popover-item .driver-popover-footer button.btn-default\n.grid-footer .btn, .grid-footer div#driver-popover-item .driver-popover-footer button, div#driver-popover-item .driver-popover-footer .grid-footer button, .grid-custom-buttons .btn, .grid-custom-buttons div#driver-popover-item .driver-popover-footer button, div#driver-popover-item .driver-popover-footer .grid-custom-buttons button\n.grid-footer, .grid-custom-buttons\n.comment-box .comment-input-container .frappe-control .ql-editor\n.grid-heading-row\n.grid-body .data-row\n.grid-body\n.awesomplete .input-with-feedback\n.ql-toolbar.ql-snow\n.form-control\n.like-disabled-input\n.control-label\ninput[type=\"checkbox\"]\n.frappe-control .ql-editor:not(.read-mode)\n.grid-body .data-row a"
   },
@@ -75,6 +93,105 @@
    "fieldname": "prev",
    "fieldtype": "Button",
    "label": "Create Preview"
+  },
+  {
+   "fieldname": "color_ii",
+   "fieldtype": "Color",
+   "hidden":1
+  },
+  {
+   "fieldname": "select_ii",
+   "fieldtype": "Select",
+   "options":"",
+   "hidden":1
+  },
+  {
+   "fieldname": "color_iii",
+   "fieldtype": "Color",
+   "hidden":1
+  },
+  {
+   "fieldname": "select_iii",
+   "fieldtype": "Select",
+   "options":"",
+   "hidden":1
+  },
+  {
+   "fieldname": "color_iv",
+   "fieldtype": "Color",
+   "hidden":1
+  },
+  {
+   "fieldname": "select_iv",
+   "fieldtype": "Select",
+   "options":"",
+   "hidden":1
+  },
+  {
+   "fieldname": "color_v",
+   "fieldtype": "Color",
+   "hidden":1
+  },
+  {
+   "fieldname": "select_v",
+   "fieldtype": "Select",
+   "options":"",
+   "hidden":1
+  },
+  {
+   "fieldname": "color_vi",
+   "fieldtype": "Color",
+   "hidden":1
+  },
+  {
+   "fieldname": "select_vi",
+   "fieldtype": "Select",
+   "options":"",
+   "hidden":1
+  },
+  {
+   "fieldname": "color_vii",
+   "fieldtype": "Color",
+   "hidden":1
+  },
+  {
+   "fieldname": "select_vii",
+   "fieldtype": "Select",
+   "options":"",
+   "hidden":1
+  },
+  {
+   "fieldname": "color_viii",
+   "fieldtype": "Color",
+   "hidden":1
+  },
+  {
+   "fieldname": "select_viii",
+   "fieldtype": "Select",
+   "options":"",
+   "hidden":1
+  },
+  {
+   "fieldname": "color_ix",
+   "fieldtype": "Color",
+   "hidden":1
+  },
+  {
+   "fieldname": "select_ix",
+   "fieldtype": "Select",
+   "options":"",
+   "hidden":1
+  },
+  {
+   "fieldname": "color_x",
+   "fieldtype": "Color",
+   "hidden":1
+  },
+  {
+   "fieldname": "select_x",
+   "fieldtype": "Select",
+   "options":"",
+   "hidden":1
   }
  ],
  "grid_page_length": 50,
