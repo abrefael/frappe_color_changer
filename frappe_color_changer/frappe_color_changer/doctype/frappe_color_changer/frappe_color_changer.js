@@ -2,28 +2,87 @@
 // For license information, please see license.txt
 const roman=['i','ii','iii','iv','v','vi','vii','viii','ix','x'];
 var selections_options_lst = [];
+
 frappe.ui.form.on("Frappe Color Changer", {
 	color_i(frm) {
-		frm.toggle_display("select_ii", true);
-		frm.toggle_display("color_ii", true);
+		t_dsp('i',frm);
 	},
 });
 
+frappe.ui.form.on("Frappe Color Changer", {
+	color_ii(frm) {
+		t_dsp('ii',frm);
+	},
+});
+
+frappe.ui.form.on("Frappe Color Changer", {
+	color_iii(frm) {
+		t_dsp('iii',frm);
+	},
+});
+frappe.ui.form.on("Frappe Color Changer", {
+	color_iv(frm) {
+		t_dsp('iv',frm);
+	},
+});
+frappe.ui.form.on("Frappe Color Changer", {
+	color_v(frm) {
+		t_dsp('v',frm);
+	},
+});
+frappe.ui.form.on("Frappe Color Changer", {
+	color_vi(frm) {
+		t_dsp('vi',frm);
+	},
+});
+frappe.ui.form.on("Frappe Color Changer", {
+	color_vii(frm) {
+		t_dsp('vii',frm);
+	},
+});
+frappe.ui.form.on("Frappe Color Changer", {
+	color_viii(frm) {
+		t_dsp('viii',frm);
+	},
+});
+frappe.ui.form.on("Frappe Color Changer", {
+	color_ix(frm) {
+		t_dsp('ix',frm);
+	},
+});
+
+
 function t_dsp(num,frm){
-	roman.indexOf(num)
+	let i = String(roman.indexOf(num) + 1);
+	let selection = "select_" + i;
+	let field = frm.get_field(selection);
+	field.df.options = selections_options_lst;
+	field.set_options();
+	frm.toggle_display(selection, true);
+	frm.toggle_display("color_" + i, true);
+
 }
 
 function selections_options(frm){
-	for (let i=0; i<10; i++){
+	var i = 0;
+	for (i; i<10; i++){
 		frappe.db.get_value('Frappe Color Changer', frm.doc.name , 'select_' + roman[i])
 		.then(r => {
 			Object.entries(r.message).forEach(([k,v]) => {
 				if ((k.includes('select_')) && (v !== null) && (v !== '')){
 					selections_options_lst = selections_options_lst.filter((val) => val !== v);
 				}
+				else if ((v === null) || (v === '')){
+					break;
+				}
 			}
 		});
 	}
+	let selection = "select_" + roman[i-1];
+	let field = frm.get_field(selection);
+	field.df.options = selections_options_lst;
+	field.set_options();
+
 }
 
 frappe.ui.form.on("Frappe Color Changer", {
