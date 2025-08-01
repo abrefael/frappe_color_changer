@@ -78,6 +78,20 @@ function selections_options(frm){
 }
 
 frappe.ui.form.on("Frappe Color Changer", {
+	doctype_name(frm) {
+		var url = '/app/' +
+			frm.doc.doctype_name.toLowerCase().replace(' ','-') +
+			'/new-' + frm.doc.doctype_name.toLowerCase().replace(' ','-') +
+			'-dfgdfbd';
+		let content = ' <iframe src="' + url + '"></iframe>';
+		frm.set_df_property("preview", "options", content);
+		frm.refresh_field("preview");
+	},
+});
+
+
+
+frappe.ui.form.on("Frappe Color Changer", {
 	onload(frm) {
 		if (!frm.is_new()){
 			selections_options(frm)
