@@ -5,57 +5,57 @@ var selections_options_lst = '\n.std-form-layout > .form-layout > .form-page\n.p
 
 frappe.ui.form.on("Frappe Color Changer", {
 	color_i(frm) {
-		t_dsp('i',frm);
+		t_dsp('i',frm, frm.doc.select_i);
 	},
 });
 
 frappe.ui.form.on("Frappe Color Changer", {
 	color_ii(frm) {
-		t_dsp('ii',frm);
+		t_dsp('ii',frm, frm.doc.select_ii);
 	},
 });
 
 frappe.ui.form.on("Frappe Color Changer", {
 	color_iii(frm) {
-		t_dsp('iii',frm);
+		t_dsp('iii',frm, frm.doc.select_iii);
 	},
 });
 frappe.ui.form.on("Frappe Color Changer", {
 	color_iv(frm) {
-		t_dsp('iv',frm);
+		t_dsp('iv',frm, frm.doc.select_iv);
 	},
 });
 frappe.ui.form.on("Frappe Color Changer", {
 	color_v(frm) {
-		t_dsp('v',frm);
+		t_dsp('v',frm, frm.doc.select_v);
 	},
 });
 frappe.ui.form.on("Frappe Color Changer", {
 	color_vi(frm) {
-		t_dsp('vi',frm);
+		t_dsp('vi',frm, frm.doc.select_vi);
 	},
 });
 frappe.ui.form.on("Frappe Color Changer", {
 	color_vii(frm) {
-		t_dsp('vii',frm);
+		t_dsp('vii',frm, frm.doc.select_vii);
 	},
 });
 frappe.ui.form.on("Frappe Color Changer", {
 	color_viii(frm) {
-		t_dsp('viii',frm);
+		t_dsp('viii',frm, frm.doc.select_viii);
 	},
 });
 frappe.ui.form.on("Frappe Color Changer", {
 	color_ix(frm) {
-		t_dsp('ix',frm);
+		t_dsp('ix',frm, frm.doc.select_ix);
 	},
 });
 
 
-function t_dsp(num,frm){
-	let i = String(roman.indexOf(num) + 1);
-	let selection = "select_" + roman[i];
-	console.log(selection);
+function t_dsp(num, frm, selected){
+	let i = roman[roman.indexOf(num) + 1];
+	let selection = "select_" + i;
+	selections_options_lst = selections_options_lst.replace("\n" + selected + "\n", "\n")
 	frm.set_df_property(selection, "options", selections_options_lst);
 	frm.refresh_field(selection);
 	frm.toggle_display(selection, true);
