@@ -1,6 +1,8 @@
 // Copyright (c) 2025, Alon Ben Refael and contributors
 // For license information, please see license.txt
 const roman=['i','ii','iii','iv','v','vi','vii','viii','ix','x'];
+var content;
+var url;
 var selections_options_lst = '\n.std-form-layout > .form-layout > .form-page\n.page-head\n.page-container\n.navbar\n.new-timeline .activity-title, .new-timeline .timeline-actions\nbody\na\n.btn.btn-default, div#driver-popover-item .driver-popover-footer button.btn-default\n.grid-footer .btn, .grid-footer div#driver-popover-item .driver-popover-footer button, div#driver-popover-item .driver-popover-footer .grid-footer button, .grid-custom-buttons .btn, .grid-custom-buttons div#driver-popover-item .driver-popover-footer button, div#driver-popover-item .driver-popover-footer .grid-custom-buttons button\n.grid-footer, .grid-custom-buttons\n.comment-box .comment-input-container .frappe-control .ql-editor\n.grid-heading-row\n.grid-body .data-row\n.grid-body\n.awesomplete .input-with-feedback\n.ql-toolbar.ql-snow\n.form-control\n.like-disabled-input\n.control-label\ninput[type="checkbox"]\n.frappe-control .ql-editor:not(.read-mode)\n.grid-body .data-row a';
 
 frappe.ui.form.on("Frappe Color Changer", {
@@ -79,22 +81,41 @@ function selections_options(frm){
 
 frappe.ui.form.on("Frappe Color Changer", {
 	doctype_name(frm) {
-		var url = '/app/' +
+		url = '/app/' +
 			frm.doc.doctype_name.toLowerCase().replace(' ','-') +
 			'/new-' + frm.doc.doctype_name.toLowerCase().replace(' ','-') +
-			'-dfgdfbd';
-		let content = ' <iframe src="' + url + '"></iframe>';
+			'-' +
+			makeid(10);
+		content = ' <iframe style="width: 99%;" src="' + url + '"></iframe>';
 		frm.set_df_property("preview", "options", content);
 		frm.refresh_field("preview");
 	},
 });
+
+function makeid(length) {
+	var result = '';
+	var characters = 'abcdefghijklmnopqrstuvwxyz';
+	var charactersLength = characters.length;
+	for ( var i = 0; i < length; i++ ) {
+		result += characters.charAt(Math.floor(Math.random() * charactersLength));
+	}
+	return result;
+}
 
 
 
 frappe.ui.form.on("Frappe Color Changer", {
 	onload(frm) {
 		if (!frm.is_new()){
-			selections_options(frm)
+			url = '/app/' +
+				frm.doc.doctype_name.toLowerCase().replace(' ','-') +
+				'/new-' + frm.doc.doctype_name.toLowerCase().replace(' ','-') +
+				'-' +
+				makeid(10);
+			content = ' <iframe style="width: 99%;" src="' + url + '"></iframe>';
+			selections_options(frm);
+			frm.set_df_property("preview", "options", content);
+			frm.refresh_field("preview");
 		}
 	},
 });
