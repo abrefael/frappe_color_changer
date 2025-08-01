@@ -55,9 +55,8 @@ frappe.ui.form.on("Frappe Color Changer", {
 function t_dsp(num,frm){
 	let i = String(roman.indexOf(num) + 1);
 	let selection = "select_" + i;
-	let field = frm.get_field(selection);
-	field.df.options = selections_options_lst;
-	field.set_options();
+	frm.set_df_property("selection", "options", selections_options_lst);
+	field.refresh_field();
 	frm.toggle_display(selection, true);
 	frm.toggle_display("color_" + i, true);
 
