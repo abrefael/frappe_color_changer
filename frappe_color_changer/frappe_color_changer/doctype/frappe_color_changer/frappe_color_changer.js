@@ -68,14 +68,7 @@ function selections_options(frm){
 	for (i; i<10; i++){
 		frappe.db.get_value('Frappe Color Changer', frm.doc.name , 'select_' + roman[i])
 		.then(r => {
-			Object.entries(r.message).forEach(([k,v]) => {
-				if ((k.includes('select_')) && (v !== null) && (v !== '')){
-					selections_options_lst = selections_options_lst.filter((val) => val !== v);
-				}
-				else if ((v === null) || (v === '')){
-					break;
-				}
-			}
+			selections_options_lst = selections_options_lst.filter((val) => val !== r.message['select_' + roman[i]]);
 		});
 	}
 	let selection = "select_" + roman[i-1];
