@@ -72,7 +72,7 @@ function selections_options(frm){
 		});
 	}
 	let selection = "select_" + roman[i-1];
-	frm.set_df_property(“selection”, “options”, selections_options_lst);
+	frm.set_df_property("selection", "options", selections_options_lst);
 	field.refresh_field();
 
 }
