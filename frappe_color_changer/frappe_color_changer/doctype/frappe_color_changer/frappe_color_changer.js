@@ -106,6 +106,7 @@ function makeid(length) {
 
 frappe.ui.form.on("Frappe Color Changer", {
 	onload(frm) {
+		console.log(frappe.utils.get_fullname());
 		if (!frm.is_new()){
 			url = '/app/' +
 				frm.doc.doctype_name.toLowerCase().replace(' ','-') +
