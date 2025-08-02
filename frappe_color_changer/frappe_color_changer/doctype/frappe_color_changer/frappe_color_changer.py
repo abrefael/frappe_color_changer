@@ -8,10 +8,9 @@ from frappe.model.document import Document
 class FrappeColorChanger(Document):
 	pass
 	
-@frappe.whitelist()
-
 dir_path = '/files/css'
 
+@frappe.whitelist()
 def update_template(doctype_name,element,color):
 	import os
 	try:
