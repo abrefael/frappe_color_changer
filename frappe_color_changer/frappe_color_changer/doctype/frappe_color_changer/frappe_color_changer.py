@@ -11,14 +11,12 @@ class FrappeColorChanger(Document):
 dir_path = '/files/css'
 
 @frappe.whitelist()
-def apply_color(doctype_name,element,color):
+def apply_color(doctype_name,element,color,user_name):
 	import os
 	try:
 		os.mkdir(path)
 	except OSError as error:
 		pass
-	user_name = frappe.utils.get_fullname()
-	user_name = user_name.lower().replace(' ','_')
 	file_path = dir_path + '/' + user_name + '_' + doctype_name + '.css'
 	element_prts = element.split(':')
 	element = element_prts[0]
@@ -36,9 +34,7 @@ def apply_color(doctype_name,element,color):
 		file.write(appendded_val)
 
 @frappe.whitelist()
-def remove_color(doctype_name,element,color):
-	user_name = frappe.utils.get_fullname()
-	user_name = user_name.lower().replace(' ','_')
+def remove_color(doctype_name,element,color,user_name):
 	file_path = dir_path + '/' + user_name + '_' + doctype_name + '.css'
 	element_prts = element.split(':')
 	element = element_prts[0]
