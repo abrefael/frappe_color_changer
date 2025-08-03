@@ -14,12 +14,12 @@
   "parts",
   "select_i",
   "column_break_waoi",
-  "column_break_iii",
   "select_color",
   "color_i",
+  "column_break_iii",
+  "apply_btn",
   "section_break_mkwq",
   "selections_chld_tbl",
-  "apply_btn",
   "preview"
  ],
  "fields": [
