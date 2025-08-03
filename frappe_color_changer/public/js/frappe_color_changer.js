@@ -16,7 +16,6 @@ const observer = new MutationObserver(() => {
 				link.href = href;
 				link.id = "temp_css";
 				document.head.appendChild(link);
-				console.log(document.body.getAttribute('data-route'));
 			}
 			else if (d_rout_str[0] != 'Form'){
 				$('link[rel=stylesheet][href="' + href +'"]').remove();
@@ -27,4 +26,9 @@ const observer = new MutationObserver(() => {
 
 observer.observe(document.body, { childList: true, subtree: true });
 
-
+var link = document.createElement('link');
+link.rel = "stylesheet";
+link.type = "text/css";
+link.href = '/files/css/' + frappe.user_info().fullname.toLowerCase().replace(' ','_') + '.css';
+link.id = "temp_css";
+document.head.appendChild(link);
