@@ -33,7 +33,8 @@
    "fieldname": "doctype_name",
    "fieldtype": "Link",
    "label": "DocType Name",
-   "options": "DocType"
+   "options": "DocType",
+   "reqd": 1
   },
   {
    "fieldname": "tip",
