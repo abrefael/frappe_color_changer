@@ -44,11 +44,11 @@ var selections_options_lst = '\n.std-form-layout > .form-layout > .form-page:bac
 frappe.ui.form.on("Frappe Color Changer", {
 	apply_btn(frm) {
 		var selected = frm.doc.select_i;
-		console.log(selected);
 		let child = frm.add_child("selections_chld_tbl");
 		var color = frm.doc.color_i;
 		child.element = selected;
 		child.color = color;
+		frm.refresh_field("selections_chld_tbl");
 		selections_options_lst = selections_options_lst.replace("\n" + selected + "\n", "\n");
 		frm.set_df_property("select_i", "options", selections_options_lst);
 		frm.refresh_field("select_i");
