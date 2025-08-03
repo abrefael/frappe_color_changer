@@ -76,7 +76,7 @@ function build_preview(frm){
 		'/new-' + frm.doc.doctype_name.toLowerCase().replace(' ','-') +
 		'-' +
 		id;
-	content = ' <iframe style="width: 99%;" src="' + url + '"></iframe>';
+	content = ' <iframe style="width: 99%; height: 1080px;" src="' + url + '"></iframe>';
 	frm.set_df_property("preview", "options", content);
 	frm.refresh_field("preview");
 }
