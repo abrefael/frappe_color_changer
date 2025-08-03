@@ -8,7 +8,7 @@ var selections_options_lst = '\n.std-form-layout > .form-layout > .form-page\n.p
 frappe.ui.form.on("Frappe Color Changer", {
 	apply_btn(frm) {
 		var selected = frm.doc.select_i;
-		let child = frm.add_child(selections_chld_tbl);
+		let child = frm.add_child("selections_chld_tbl");
 		var color = frm.doc.color_i;
 		child.element = selected;
 		child.color = color;
