@@ -36,7 +36,7 @@ frappe.ui.form.on("selections_chld_tbl",{
 		frm.get_field("selections_chld_tbl").grid.grid_rows[d.idx - 1].remove();
 		selections_options_lst = selections_options_lst + "\n" + element;
 		frm.set_df_property("select_i", "options", selections_options_lst);
-		frm.refresh_field(selection);
+		frm.refresh_field("select_i");
 		frm.refresh();
 		frappe.call({method:'frappe_color_changer.frappe_color_changer.doctype.frappe_color_changer.frappe_color_changer.remove_color',
 			args: {
