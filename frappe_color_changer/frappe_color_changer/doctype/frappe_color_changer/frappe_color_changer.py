@@ -14,7 +14,7 @@ dir_path = '/files/css'
 def apply_color(doctype_name,element,color,user_name):
 	import os
 	try:
-		os.mkdir(path)
+		os.mkdir(dir_path)
 	except OSError as error:
 		pass
 	file_path = dir_path + '/' + user_name + '_' + doctype_name + '.css'
