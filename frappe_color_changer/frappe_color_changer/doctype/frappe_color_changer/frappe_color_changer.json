@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{user_full_name}-{doctype_name}",
  "creation": "2025-07-31 14:10:58.352751",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -9,6 +10,7 @@
   "tip",
   "section_break_kqcq",
   "dt_selected",
+  "user_full_name",
   "parts",
   "select_i",
   "column_break_waoi",
@@ -46,6 +48,11 @@
    "default": "0",
    "fieldname": "dt_selected",
    "fieldtype": "Check",
+   "hidden": 1
+  },
+  {
+   "fieldname": "user_full_name",
+   "fieldtype": "Data",
    "hidden": 1
   },
   {
@@ -87,105 +94,6 @@
    "fieldname": "apply_btn",
    "fieldtype": "Button",
    "label": "apply Selection"
-  },
-  {
-   "fieldname": "color_ii",
-   "fieldtype": "Color",
-   "hidden":1
-  },
-  {
-   "fieldname": "select_ii",
-   "fieldtype": "Select",
-   "options":"",
-   "hidden":1
-  },
-  {
-   "fieldname": "color_iii",
-   "fieldtype": "Color",
-   "hidden":1
-  },
-  {
-   "fieldname": "select_iii",
-   "fieldtype": "Select",
-   "options":"",
-   "hidden":1
-  },
-  {
-   "fieldname": "color_iv",
-   "fieldtype": "Color",
-   "hidden":1
-  },
-  {
-   "fieldname": "select_iv",
-   "fieldtype": "Select",
-   "options":"",
-   "hidden":1
-  },
-  {
-   "fieldname": "color_v",
-   "fieldtype": "Color",
-   "hidden":1
-  },
-  {
-   "fieldname": "select_v",
-   "fieldtype": "Select",
-   "options":"",
-   "hidden":1
-  },
-  {
-   "fieldname": "color_vi",
-   "fieldtype": "Color",
-   "hidden":1
-  },
-  {
-   "fieldname": "select_vi",
-   "fieldtype": "Select",
-   "options":"",
-   "hidden":1
-  },
-  {
-   "fieldname": "color_vii",
-   "fieldtype": "Color",
-   "hidden":1
-  },
-  {
-   "fieldname": "select_vii",
-   "fieldtype": "Select",
-   "options":"",
-   "hidden":1
-  },
-  {
-   "fieldname": "color_viii",
-   "fieldtype": "Color",
-   "hidden":1
-  },
-  {
-   "fieldname": "select_viii",
-   "fieldtype": "Select",
-   "options":"",
-   "hidden":1
-  },
-  {
-   "fieldname": "color_ix",
-   "fieldtype": "Color",
-   "hidden":1
-  },
-  {
-   "fieldname": "select_ix",
-   "fieldtype": "Select",
-   "options":"",
-   "hidden":1
-  },
-  {
-   "fieldname": "color_x",
-   "fieldtype": "Color",
-   "hidden":1
-  },
-  {
-   "fieldname": "select_x",
-   "fieldtype": "Select",
-   "options":"",
-   "hidden":1
   }
  ],
  "grid_page_length": 50,
