@@ -2,17 +2,17 @@
 # For license information, please see license.txt
 
 import frappe
+import os
 from frappe.model.document import Document
 
 
 class FrappeColorChanger(Document):
 	pass
 	
-dir_path = '/files/css'
+dir_path = os.getcwd() + '/' + cstr(frappe.local.site) + '/public/files/css'
 
 @frappe.whitelist()
 def apply_color(doctype_name,element,color,user_name):
-	import os
 	from pathlib import Path
 	try:
 		os.mkdir(dir_path)
