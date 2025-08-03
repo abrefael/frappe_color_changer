@@ -56,7 +56,7 @@ frappe.ui.form.on("Frappe Color Changer", {
 			args: {
 				'element': selected,
 				'color':color,
-				'doctype_name': frm.doc.doctype_name,
+				'doctype_name': frm.doc.doctype_name.toLowerCase().replace(' ','_'),
 				'user_name': frm.doc.user_full_name
 			}
 		}).then(r => {
@@ -79,7 +79,7 @@ frappe.ui.form.on("selections_chld_tbl",{
 			args: {
 				'element': element,
 				'color':color,
-				'doctype_name': frm.doc.doctype_name,
+				'doctype_name': frm.doc.doctype_name.toLowerCase().replace(' ','_'),
 				'user_name': frm.doc.user_full_name
 			}
 		}).then(r => {
