@@ -62,6 +62,7 @@ frappe.ui.form.on("Frappe Color Changer", {
 		}).then(r => {
 			build_preview(frm);
 		});
+		frm.save();
 	},
 });
 
@@ -85,6 +86,7 @@ frappe.ui.form.on("selections_chld_tbl",{
 		}).then(r => {
 			build_preview(frm);
 		});
+		frm.save();
 	}
 });
 
