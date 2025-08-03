@@ -3,6 +3,7 @@
 
 import frappe
 import os
+from frappe.utils import cstr
 from frappe.model.document import Document
 
 
