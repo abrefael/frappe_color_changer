@@ -48,14 +48,15 @@ frappe.ui.form.on("selections_chld_tbl",{
 			build_preview(frm);
 		});
 	}
-})
+});
 
 
 
 frappe.ui.form.on("Frappe Color Changer", {
 	doctype_name(frm) {
 		if (frm.doc.dt_selected){
-			frappe.throw(__('DocType was already set. Do not change it!'))
+			frappe.throw(__('DocType was already set. Do not change it!'));
+			return
 		}
 		build_preview(frm);
 	},
