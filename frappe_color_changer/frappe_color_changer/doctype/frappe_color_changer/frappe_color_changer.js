@@ -70,7 +70,8 @@ function selections_options(frm){
 	for (i; i<10; i++){
 		frappe.db.get_value('Frappe Color Changer', frm.doc.name , 'select_' + roman[i])
 		.then(r => {
-			selections_options_lst = selections_options_lst.filter((val) => val !== r.message['select_' + roman[i]]);
+			selections_options_lst = selections_options_lst.filter(
+				(val) => val !== r.message['select_' + roman[i]]);
 		});
 	}
 	let selection = "select_" + roman[i-1];
@@ -81,14 +82,7 @@ function selections_options(frm){
 
 frappe.ui.form.on("Frappe Color Changer", {
 	doctype_name(frm) {
-		url = '/app/' +
-			frm.doc.doctype_name.toLowerCase().replace(' ','-') +
-			'/new-' + frm.doc.doctype_name.toLowerCase().replace(' ','-') +
-			'-' +
-			makeid(10);
-		content = ' <iframe style="width: 99%;" src="' + url + '"></iframe>';
-		frm.set_df_property("preview", "options", content);
-		frm.refresh_field("preview");
+		build_preview(frm);
 	},
 });
 
@@ -102,21 +96,25 @@ function makeid(length) {
 	return result;
 }
 
+function build_preview(frm){
+	url = '/app/' +
+		frm.doc.doctype_name.toLowerCase().replace(' ','-') +
+		'/new-' + frm.doc.doctype_name.toLowerCase().replace(' ','-') +
+		'-' +
+		makeid(10);
+	content = ' <iframe style="width: 99%;" src="' + url + '"></iframe>';
+	frm.set_df_property("preview", "options", content);
+	frm.refresh_field("preview");
+}
+
 
 
 frappe.ui.form.on("Frappe Color Changer", {
 	onload(frm) {
 		console.log(frappe.session.user_fullname);
 		if (!frm.is_new()){
-			url = '/app/' +
-				frm.doc.doctype_name.toLowerCase().replace(' ','-') +
-				'/new-' + frm.doc.doctype_name.toLowerCase().replace(' ','-') +
-				'-' +
-				makeid(10);
-			content = ' <iframe style="width: 99%;" src="' + url + '"></iframe>';
+			build_preview(frm);
 			selections_options(frm);
-			frm.set_df_property("preview", "options", content);
-			frm.refresh_field("preview");
 		}
 	},
 });
