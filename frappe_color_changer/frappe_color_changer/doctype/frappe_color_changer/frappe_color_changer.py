@@ -11,7 +11,7 @@ class FrappeColorChanger(Document):
 dir_path = '/files/css'
 
 @frappe.whitelist()
-def update_template(doctype_name,element,color):
+def apply_color(doctype_name,element,color):
 	import os
 	try:
 		os.mkdir(path)
@@ -34,3 +34,26 @@ def update_template(doctype_name,element,color):
 		appendded_val = element + '{' + prop + ':' + color + ';}'
 	with open(file_path, 'w') as file:
 		file.write(appendded_val)
+
+@frappe.whitelist()
+def remove_color(doctype_name,element,color):
+	user_name = frappe.utils.get_fullname()
+	user_name = user_name.lower().replace(' ','_')
+	file_path = dir_path + '/' + user_name + '_' + doctype_name + '.css'
+	element_prts = element.split(':')
+	element = element_prts[0]
+	prop = element_prts[1]
+	appendded_val = ''
+	with open(file_path, 'r') as file:
+		for line in file.read():
+			if element in line and prop in line:
+				line = ''
+			appendded_val += line
+	with open(file_path, 'w') as file:
+		file.write(appendded_val)
+
+
+
+
+
+
